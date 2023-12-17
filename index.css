@@ -1,0 +1,133 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;1,100;1,200;1,300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+body{
+    margin: 0;
+    width:100%;
+}
+.festive{
+    min-height: 100vh;
+    background: url(images/kieran-white-SBdmQcW8qag-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 0.2rem;
+    
+}
+.text{
+    color: white;
+}
+.snow, .snow2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/snow.png);
+    background: url(images/snow2.png);
+
+    background-position: 0 0;
+}
+.snow{
+    background-size: 70em;
+    animation: snowfall 30s linear infinite;
+}
+.snow2{
+    background-size: 50em;
+    animation:snowfall2 30s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes snowfall{
+  100%{
+    background-position: 70em 70em;
+  }  
+}
+@keyframes snowfall2 {
+    100%{
+        background-position: 50em 0;
+    }
+}
+.title {
+    animation: color-animation 4s linear infinite;
+  }
+  
+  .title1 {
+    --color-1: 	#e03400;
+    --color-2: 	#e00017;
+    --color-3: 	#ffab53;
+  }
+  
+  .title2 {
+    --color-1: #e06a00;
+    --color-2: #0093ff;
+    --color-3: #cf5353;
+  }
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+  /* Here are just some visual styles. 🖌 */
+  
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 750;
+    font-size: 4rem;
+    display: flex;
+    flex-direction:row;
+    gap: 0.2rem;
+    margin-left: 3rem;
+    
+  }
+  #wish1{
+    font-family: 'Rochester', cursive;
+    color: #17b4d4;
+    text-shadow: 2px 2px 8px 	#ec407a;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.3rem;
+    color: #9575cd;
+   
+    /* font-weight: bold; */
+  }
+  #wish2{
+   color: #ffc0cb;
+   font-size:1.55rem;
+   text-shadow: 2px 2px 8px #cc99a2;
+   font-style: italic;
+   font-family:'Josefin Sans', sans-serif;
+   font-weight: bold;
+   animation-name: text;
+   animation-duration: 5s;
+   animation-delay: 2s;
+   letter-spacing: 0.15rem;
+   
+  }
+  @keyframes text { 
+    0%{ 
+        color: black; 
+        margin-bottom: -40px; 
+    } 
+    30%{ 
+        letter-spacing: 25px; 
+        margin-bottom: -40px; 
+        } 
+    85%{ 
+        letter-spacing: 8px; 
+        margin-bottom: -40px; 
+    } 
+    
+}
+ .audio1{
+    display: none;
+ }  
